@@ -8,10 +8,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <router-link class="nav-link" to="/about">Startseite</router-link>
+          <router-link class="nav-link" to="/home">Startseite</router-link>
           <router-link class="nav-link" to="/uebersicht">Übersicht</router-link>
-          <router-link class="nav-link" to="/verbundene-konten">Verbundene Konten</router-link>
-          <router-link class="nav-link" to="/einstellungen">Einstellungen</router-link>
+          <router-link class="nav-link" to="/verbundeneKonten">Verbundene Konten</router-link>
+          <router-link class="nav-link" to="/Einstellungen">Einstellungen</router-link>
 
           <!--     <a class="nav-link active" aria-current="page" href="#">Home</a>
                <a class="nav-link" href="#">Übersicht</a>
