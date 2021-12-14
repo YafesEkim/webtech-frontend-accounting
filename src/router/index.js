@@ -4,6 +4,7 @@ import About from '../views/About.vue'
 import Übersicht from '@/views/Übersicht'
 import VerbundeneKonten from '@/views/VerbundeneKonten'
 import Einstellungen from '@/views/Einstellungen'
+import Persons from '@/views/Persons'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/einstellungen',
     name: 'Einstellungen',
     component: Einstellungen
+  },
+  {
+    path: '/persons',
+    name: 'Persons',
+    component: Persons
   }
 ]
 

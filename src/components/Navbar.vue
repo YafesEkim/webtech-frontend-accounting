@@ -12,6 +12,7 @@
           <router-link class="nav-link" to="/uebersicht">Übersicht</router-link>
           <router-link class="nav-link" to="/verbundeneKonten">Verbundene Konten</router-link>
           <router-link class="nav-link" to="/Einstellungen">Einstellungen</router-link>
+          <router-link class="nav-link" to="/persons">Persons</router-link>
 
           <!--     <a class="nav-link active" aria-current="page" href="#">Home</a>
                <a class="nav-link" href="#">Übersicht</a>
