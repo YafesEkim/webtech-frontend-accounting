@@ -9,7 +9,7 @@
             <h5 class="card-title">{{ person.firstName }} {{ person.lastName }}</h5>
             <p class="card-text">
               {{ person.firstName }} {{ person.lastName }} ist {{ person.member ? 'member' : 'kein member' }} und
-              hat {{ person.rechnung.length }} Rechnung(en).
+              hat {{ person.rechnungIds.length }} Rechnung(en).
             </p>
           </div>
         </div>
