@@ -1,4 +1,5 @@
 <template>
+  <div class="rechnung"></div>
 <h1>Deine Buchhaltungsoftware Y&M</h1>
 </template>
 
@@ -8,6 +9,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>
