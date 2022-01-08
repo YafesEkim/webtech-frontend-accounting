@@ -9,15 +9,8 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <router-link class="nav-link" to="/home">Startseite</router-link>
-          <router-link class="nav-link" to="/uebersicht">Übersicht</router-link>
-          <router-link class="nav-link" to="/verbundeneKonten">Verbundene Konten</router-link>
-          <router-link class="nav-link" to="/Einstellungen">Einstellungen</router-link>
+          <router-link class="nav-link" to="/rechnung">Rechnung</router-link>
           <router-link class="nav-link" to="/persons">Persons</router-link>
-
-          <!--     <a class="nav-link active" aria-current="page" href="#">Home</a>
-               <a class="nav-link" href="#">Übersicht</a>
-               <a class="nav-link" href="#">Verbundene Konten</a>
-               <a class="nav-link disabled">Account Einstellungen</a> -->
         </div>
       </div>
     </div>
