@@ -1,27 +1,28 @@
 <template>
+  <div class="rechnung"></div>
   <h1>Hier könne Sie ihre Rechnungen erstellen</h1>
   <div>
     <form>
       <label for="firma">Tragen Sie hier Ihre Rechnung ein</label>
-      <input type="text" id="firma" name="firma" placeholder="Firma">
+      <input type="text" id="firma" name="firma" placeholder="Firma" required>
       <label for="summe">Betrag €</label> <br>
-      <input type="number" id="summe" name="summe" placeholder="0.00" step="any"> <br> <br>
+      <input type="number" id="summe" name="summe" placeholder="0.00" step="any" required> <br> <br>
       <label for="art">Rechnungsart</label>
-      <select id="art" name="rechnungsart" >
+      <select id="art" name="rechnungsart" required>
         <option value="" disabled selected hidden>Wähle aus...</option>
         <option value="einnahme">Einnahme</option>
         <option value="ausgabe">Ausgabe</option>
       </select>
       <label for="steuer">Mehrwertsteuersatz</label>
-      <select name="steuer" id="steuer">
+      <select name="steuer" id="steuer" required>
         <option value="" disabled selected hidden>Wähle aus...</option>
         <option value="7mwst">7% MwSt.</option>
         <option value="19mwst">19% MwSt</option>
       </select>
       <input type="submit" value="Rechnung erstellen">
     </form>
+  </div>
 </template>
-
 <script>
 export default {
   name: 'Rechnung'
@@ -29,13 +30,11 @@ export default {
 </script>
 
 <style>
-
-div{
+ div{
   border-radius: 10px;
   background-color: #DAD7C5;
   padding: 10px;
   width: 50%;
-  position: absolute;
 }
 
 input[type=text] , input[type=password], input[type=number], select {
@@ -78,5 +77,4 @@ label {
   font-weight: bold;
   margin-bottom: 20px;
 }
-
 </style>
