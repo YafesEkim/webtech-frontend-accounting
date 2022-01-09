@@ -5,21 +5,27 @@
       <table class="table">
         <thead>
         <tr>
+          <th>Rechnunsnr.</th>
           <th>Firma</th>
           <th>Datum</th>
           <th>Betrag in €</th>
+          <th>Rechnungsart</th>
         </tr>
         </thead>
         <tbody v-for="rechnung in rechnung" :key="rechnung.id">
-        <tr v-if="rechnung.rechnunngsart === EINNAHME" class = "einnahme">
+        <tr v-if="rechnung.rechnungsart === 'AUSGABE'" class = "ausgabe">
+          <td>{{rechnung.rechnungsNummer}}</td>
           <td>{{rechnung.firma.firmaName}}</td>
           <td>{{rechnung.rechnungsDatum}}</td>
           <td>{{rechnung.betrag}}</td>
+          <td>{{rechnung.rechnungsart}}</td>
         </tr>
-        <tr v-else-if="rechnung.rechnunngsart === AUSGABE" class = "ausgabe">
+        <tr v-else-if="rechnung.rechnungsart === 'EINNAHME'" class = "einnahme">
+          <td>{{rechnung.rechnungsNummer}}</td>
           <td>{{rechnung.firma.firmaName}}</td>
           <td>{{rechnung.rechnungsDatum}}</td>
           <td>{{rechnung.betrag}}</td>
+          <td>{{rechnung.rechnungsart}}</td>
         </tr>
         </tbody>
       </table>
@@ -50,5 +56,20 @@ export default {
 </script>
 
 <style>
+.col {
+  background: white;
+  width: 100%;
+}
+h1{
+  background: #041B31;
+  color: white;
+  width: 100%;
+}
+.einnahme{
+  background: darkseagreen;
+}
+.ausgabe{
+  background: indianred;
+}
 
 </style>
