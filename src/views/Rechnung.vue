@@ -23,13 +23,14 @@
     </form>
   </div>
 </template>
+
 <script>
 export default {
   name: 'Rechnung'
 }
 </script>
 
-<style>
+<style scoped>
 div{
   border-radius: 10px;
   background-color: #DAD7C5;
@@ -65,7 +66,6 @@ input[type=submit]:hover {
 
 }
 
-
 input[type=text] , input[type=number], select {
   width: 100%;
   padding: 10px 15px;
@@ -75,7 +75,6 @@ input[type=text] , input[type=number], select {
   box-sizing: border-box;
 
 }
-
 
 label {
   font-family: Arial, Helvetica, sans-serif;

@@ -115,7 +115,6 @@ input[type="reset"]:hover {
   background-color: rgb(165, 0, 0);
 }
 
-
 input[type=submit] {
   width: 100%;
   background-color: #4C6D8D;
@@ -147,7 +146,6 @@ input[type=text], input[type=number], select {
   box-sizing: border-box;
 
 }
-
 
 label {
   font-family: Arial, Helvetica, sans-serif;
