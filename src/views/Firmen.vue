@@ -13,7 +13,7 @@
              class="inputfeld" required v-model= "address" >
       <label for="ustid">UmsatzsteuerID</label>
       <input type="text" id="ustid" name="ustid" placeholder="UstID" class="inputfeld" v-model= "ust_id" >
-      <input type="submit" value="Firma eintragen" @click.prevent='createFirma'>
+      <input type="submit" value="Firma eintragen" @click='createFirma'>
       <input type="reset" value="Eingaben löschen">
     </form>
   </div>
@@ -48,7 +48,7 @@ export default {
         redirect: 'follow'
       }
 
-      fetch('https://webtech1accounting.herokuapp.com//api/v1/firma/', requestOptions)
+      fetch('http://localhost:8080/api/v1/firma/', requestOptions)
         .catch(error => console.log('error', error))
     }
   }
