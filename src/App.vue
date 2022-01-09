@@ -34,4 +34,13 @@ export default {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+body{
+  background-color: rgb(174, 201, 77);
+  background-image:
+    url("./assets/buero-einrichten-t.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size : cover;
+  -moz-background-size: cover;
+  -moz-background-size: cover;
+}
 </style>

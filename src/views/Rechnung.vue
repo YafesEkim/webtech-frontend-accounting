@@ -1,30 +1,27 @@
 <template>
   <div class="container">
     <h1 style="text-align: center;">Hier können Sie ihre Rechnungen erstellen</h1>
-    <p>Tragen Sie bitte Ihre Rechnung in das untenstehende <br>Formular ein.</p>
+    <p>Tragen Sie bitte Ihre Rechnung in das untenstehende  <br >Formular ein.</p>
     <form>
       <label for="firma">Firmenname</label>
-      <input type="text" id="firma" name="firma" placeholder="Firma">
-      <label for="rechnungsNummer">Rechnungs Nummer</label>
-      <input type="text" id="rechnungsNummer" name="rechnungsNummer" placeholder="Rechnungs Nummer" required
-             v-model="rechnungsNummer">
+      <input type="text" id="firma" name="firma" placeholder="Firma" required>
       <label for="summe">Betrag €</label> <br>
-      <input type="number" id="summe" name="summe" placeholder="0.00" step="any" required v-model="betrag"> <br> <br>
+      <input type="number" id="summe" name="summe" placeholder="0.00" step="any" required> <br> <br>
       <label for="rechnungsdatum">Rechnungsdatum</label>
-      <input type="date" name="rechnungsdatum" id="rechnungsdatum" required v-model="rechnungsDatum">
+      <input type="date" name="rechnungsdatum" id="rechnungsdatum">
       <label for="art">Rechnungsart</label>
-      <select id="art" name="rechnungsart" required v-model="rechnungsart">
+      <select id="art" name="rechnungsart" required>
         <option value="" disabled selected hidden>Wähle aus...</option>
-        <option value="EINNAHME">Einnahme</option>
-        <option value="AUSGABE">Ausgabe</option>
+        <option value="einnahme">Einnahme</option>
+        <option value="ausgabe">Ausgabe</option>
       </select>
-      <!--      <label for="steuer">Mehrwertsteuersatz</label>-->
-      <!--      <select name="steuer" id="steuer" required>-->
-      <!--        <option value="" disabled selected hidden>Wähle aus...</option>-->
-      <!--        <option value="7mwst">7% MwSt.</option>-->
-      <!--        <option value="19mwst">19% MwSt</option>-->
-      <!--      </select>-->
-      <input type="submit" value="Rechnung erstellen" @click='createRechnung'>
+      <label for="steuer">Mehrwertsteuersatz</label>
+      <select name="steuer" id="steuer" required>
+        <option value="" disabled selected hidden>Wähle aus...</option>
+        <option value="7mwst">7% MwSt.</option>
+        <option value="19mwst">19% MwSt</option>
+      </select>
+      <input type="submit" value="Rechnung erstellen">
       <input type="reset" value="Eingaben löschen">
     </form>
   </div>
@@ -32,81 +29,33 @@
 
 <script>
 export default {
-  name: 'Rechnung',
-  data () {
-    return {
-      firma: [],
-      rechnungsNummer: '',
-      rechnungsart: '',
-      rechnungsDatum: '',
-      betrag: '',
-      owner_id: 1
-    }
-  },
-  methods: {
-    createRechnung () {
-      const myHeaders = new Headers()
-      myHeaders.append('Content-Type', 'application/json')
-
-      const raw = JSON.stringify({
-        rechnungsNummer: this.rechnungsNummer,
-        rechnungsart: this.rechnungsart,
-        rechnungsDatum: this.rechnungsDatum,
-        betrag: this.betrag,
-        ownerId: this.owner_id
-      })
-
-      const requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: raw,
-        redirect: 'follow'
-      }
-
-      fetch('http://localhost:8080/api/v1/rechnungen/', requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error))
-    },
-    getFirma () {
-      const requestOptions = {
-        method: 'GET',
-        redirect: 'follow'
-      }
-
-      fetch('http://localhost:8080/api/v1/firma/', requestOptions)
-        .then(response => response.text())
-        .then(result => result.forEach(firma => this.firma.push(this.firma)))
-        .catch(error => console.log('error', error))
-    }
-  }
+  name: 'Rechnung'
 }
 </script>
 
 <style scoped>
 
-body {
+body{
   background-color: rgb(174, 201, 77);
-  background-image: url("../assets/buero-einrichten-t.jpg");
+  background-image:
+    url("../assets/buero-einrichten-t.jpg");
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
+  -webkit-background-size : cover;
   -moz-background-size: cover;
   -moz-background-size: cover;
 
 }
 
 h1 {
-  color: #4C6D8D;
+  color: #4C6D8D ;
 }
-
-p {
+p{
   text-align: center;
   font-size: larger;
   font-weight: bold;
   font-style: italic;
 }
-
-div {
+div{
   border-radius: 10px;
   background-color: #DAD7C5;
   padding: 10px;
@@ -114,7 +63,7 @@ div {
 
 }
 
-input[type=text], input[type=password], input[type=number], input[type=date], select {
+input[type=text] , input[type=password], input[type=number], input[type=date] , select {
   width: 100%;
   padding: 10px 15px;
   margin: 10px 0px;
@@ -141,7 +90,7 @@ input[type=submit]:hover {
 
 }
 
-input[type=text], input[type=number], select {
+input[type=text] , input[type=number], select {
   width: 100%;
   padding: 10px 15px;
   margin: 10px 0px;
@@ -164,11 +113,12 @@ label {
   width: 60%;
 }
 
-body {
+body{
   background-color: rgb(174, 201, 77);
-  background-image: url("../assets/buero-einrichten-t.jpg");
+  background-image:
+    url("../assets/buero-einrichten-t.jpg");
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
+  -webkit-background-size : cover;
   -moz-background-size: cover;
   -moz-background-size: cover;
 
