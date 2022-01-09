@@ -1,25 +1,22 @@
 <template>
   <div class="uebersicht">
-    <h1>This is an about page</h1>
-  </div>
-  <div class="uebersicht">
     <h1>Übersicht</h1>
-    <div class="col" v-for="firma in firma" :key="firma.id">
+    <div class="col" v-for="rechnung in rechnung" :key="rechnung.id">
       <table class="table">
         <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Firma</th>
           <th scope="col">Datum</th>
-          <th scope="col">Betrag</th>
+          <th scope="col">Betrag in €</th>
         </tr>
         </thead>
         <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>{{firma.firmaName}}</td>
-          <td>{{firma.datum}}</td>
-          <td>{{firma.betrag}}</td>
+          <td>{{rechnung.firma.firmaName}}</td>
+          <td>{{rechnung.rechnungsDatum}}</td>
+          <td>{{rechnung.betrag}}</td>
         </tr>
         </tbody>
       </table>
@@ -29,10 +26,10 @@
 
 <script>
 export default {
-  name: 'Firma',
+  name: 'Rechnung',
   data () {
     return {
-      firma: []
+      rechnung: []
     }
   },
   mounted () {
@@ -40,10 +37,11 @@ export default {
       method: 'GET',
       redirect: 'follow'
     }
-    fetch('https://webtech1accounting.herokuapp.com//api/v1/firma/', requestOptions)
+    fetch('https://webtech1accounting.herokuapp.com//api/v1/rechnungen/', requestOptions)
       .then(response => response.json())
-      .then(result => console.log(result))
+      .then(result => result.forEach(rechnung => this.rechnung.push(rechnung)))
       .catch(error => console.log('error', error))
   }
+
 }
 </script>
