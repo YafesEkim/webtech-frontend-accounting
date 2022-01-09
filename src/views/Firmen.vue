@@ -27,17 +27,18 @@ export default {
 }
 </script>
 
-<style>
-
-p, div, label {
+<style scoped>
+p,div,label
+{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+body{
   background-color: rgb(174, 201, 77);
-  background-image: url("../assets/buero-einrichten-t.jpg");
+  background-image:
+    url("../assets/buero-einrichten-t.jpg");
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
+  -webkit-background-size : cover;
   -moz-background-size: cover;
   -moz-background-size: cover;
 
@@ -54,7 +55,6 @@ body {
   align-items: center;
   text-align: center;
 }
-
 .banner::after {
   content: "";
   background-color: rgba(0, 0, 0, 0.6);
@@ -62,7 +62,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
 h1 {
   background-color: white;
   color: black;
@@ -73,9 +72,7 @@ div {
   background-color: #DAD7C5;
   padding: 10px;
   width: 50%;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid;
+  height: 50%;
 }
 
 .form {
@@ -87,7 +84,7 @@ div {
 
 }
 
-input[type=text], input[type=password], input[type=number], input[type="reset"], select {
+input[type=text] , input[type=password], input[type=number], input[type="reset"],  select {
   width: 100%;
   padding: 10px 15px;
   margin: 10px 0px;
@@ -115,7 +112,7 @@ input[type="reset"]:hover {
   background-color: rgb(165, 0, 0);
 }
 
-input[type=submit] {
+input[type=submit]{
   width: 100%;
   background-color: #4C6D8D;
   color: white;
@@ -129,15 +126,15 @@ input[type=submit] {
   font-family: Arial, Helvetica, sans-serifs;
 }
 
-input[type=submit]:hover {
-  background-color: #041B31;
+input[type=submit]:hover{
+  background-color:#041B31;
 }
 
-.firmatext {
+.firmatext{
   text-align: center;
 }
 
-input[type=text], input[type=number], select {
+input[type=text] , input[type=number], select {
   width: 100%;
   padding: 10px 15px;
   margin: 10px 0px;

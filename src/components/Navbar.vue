@@ -18,12 +18,12 @@
   </nav>
 </template>
 
-<script>
+<script scoped>
 export default {
   name: 'Navbar'
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>

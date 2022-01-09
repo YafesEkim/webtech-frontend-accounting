@@ -1,11 +1,14 @@
 <template>
   <div class="container">
-    <h1 style="text-align: center;">Hier könne Sie ihre Rechnungen erstellen</h1>
+    <h1 style="text-align: center;">Hier können Sie ihre Rechnungen erstellen</h1>
+    <p>Tragen Sie bitte Ihre Rechnung in das untenstehende  <br >Formular ein.</p>
     <form>
-      <label for="firma">Tragen Sie hier Ihre Rechnung ein</label>
+      <label for="firma">Firmenname</label>
       <input type="text" id="firma" name="firma" placeholder="Firma" required>
       <label for="summe">Betrag €</label> <br>
       <input type="number" id="summe" name="summe" placeholder="0.00" step="any" required> <br> <br>
+      <label for="rechnungsdatum">Rechnungsdatum</label>
+      <input type="date" name="rechnungsdatum" id="rechnungsdatum">
       <label for="art">Rechnungsart</label>
       <select id="art" name="rechnungsart" required>
         <option value="" disabled selected hidden>Wähle aus...</option>
@@ -31,6 +34,23 @@ export default {
 </script>
 
 <style scoped>
+
+body {
+  background-image: url("../assets/buero-einrichten-t.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size : cover;
+  -moz-background-size: cover;
+  -moz-background-size: cover;
+}
+h1 {
+  color: #4C6D8D ;
+}
+p{
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  font-style: italic;
+}
 div{
   border-radius: 10px;
   background-color: #DAD7C5;
@@ -39,7 +59,7 @@ div{
 
 }
 
-input[type=text] , input[type=password], input[type=number], select {
+input[type=text] , input[type=password], input[type=number], input[type=date] , select {
   width: 100%;
   padding: 10px 15px;
   margin: 10px 0px;
