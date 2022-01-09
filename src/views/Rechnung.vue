@@ -1,7 +1,6 @@
 <template>
-  <div class="rechnung"></div>
-  <h1>Hier könne Sie ihre Rechnungen erstellen</h1>
-  <div>
+  <div class="container">
+    <h1 style="text-align: center;">Hier könne Sie ihre Rechnungen erstellen</h1>
     <form>
       <label for="firma">Tragen Sie hier Ihre Rechnung ein</label>
       <input type="text" id="firma" name="firma" placeholder="Firma" required>
@@ -20,6 +19,7 @@
         <option value="19mwst">19% MwSt</option>
       </select>
       <input type="submit" value="Rechnung erstellen">
+      <input type="reset" value="Eingaben löschen">
     </form>
   </div>
 </template>
@@ -30,11 +30,12 @@ export default {
 </script>
 
 <style>
- div{
+div{
   border-radius: 10px;
   background-color: #DAD7C5;
   padding: 10px;
   width: 50%;
+
 }
 
 input[type=text] , input[type=password], input[type=number], select {
@@ -63,6 +64,8 @@ input[type=submit]:hover {
   background-color: #041B31;
 
 }
+
+
 input[type=text] , input[type=number], select {
   width: 100%;
   padding: 10px 15px;
@@ -72,9 +75,45 @@ input[type=text] , input[type=number], select {
   box-sizing: border-box;
 
 }
+
+
 label {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+body{
+  background-color: rgb(174, 201, 77);
+  background-image:
+    url("../assets/buero-einrichten-t.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size : cover;
+  -moz-background-size: cover;
+  -moz-background-size: cover;
+
+}
+
+input[type="reset"] {
+  width: 100%;
+  background-color: rgb(100, 3, 3);
+  color: white;
+  padding: 12px 15px;
+  font-size: 100%;
+  margin: 10px 0px;
+  border-radius: 4px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+input[type="reset"]:hover {
+  background-color: rgb(165, 0, 0);
 }
 </style>

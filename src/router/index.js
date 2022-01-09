@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Rechnung from '@/views/Rechnung'
-import Persons from '@/views/Persons'
+import Firmen from '@/views/Firmen'
 
 const routes = [
   {
@@ -21,9 +21,9 @@ const routes = [
     component: Rechnung
   },
   {
-    path: '/persons',
-    name: 'Persons',
-    component: Persons
+    path: '/firmen',
+    name: 'Firmen',
+    component: Firmen
   }
 ]
 

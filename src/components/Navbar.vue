@@ -10,7 +10,7 @@
         <div class="navbar-nav">
           <router-link class="nav-link" to="/home">Startseite</router-link>
           <router-link class="nav-link" to="/rechnung">Rechnung</router-link>
-          <router-link class="nav-link" to="/persons">Persons</router-link>
+          <router-link class="nav-link" to="/firmen">Firmen</router-link>
         </div>
       </div>
     </div>
