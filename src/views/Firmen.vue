@@ -15,6 +15,7 @@
       <input type="text" id="ustid" name="ustid" placeholder="UstID" class="inputfeld" v-model= "ust_id" >
       <input type="submit" value="Firma eintragen" @click='createFirma'>
       <input type="reset" value="Eingaben löschen">
+      <input type="submit" value="Firma löschen" @click='deleteFirma'>
     </form>
   </div>
 </template>
@@ -49,6 +50,18 @@ export default {
       }
 
       fetch('http://localhost:8080/api/v1/firma/', requestOptions)
+        .catch(error => console.log('error', error))
+    },
+    deleteFirma () {
+      const raw = ''
+
+      const requestOptions = {
+        method: 'DELETE',
+        body: raw,
+        redirect: 'follow'
+      }
+
+      fetch('http://localhost:8080/api/v1/firma/1', requestOptions)
         .catch(error => console.log('error', error))
     }
   }
