@@ -11,7 +11,8 @@
           <router-link class="nav-link" to="/home">Home</router-link>
           <router-link class="nav-link" to="/rechnung">Rechnung</router-link>
           <router-link class="nav-link" to="/firmen">Firmen</router-link>
-          <router-link class="nav-link" to="/uebersicht">Uebersicht</router-link>
+          <router-link class="nav-link" to="/uebersicht">Übersicht</router-link>
+          <router-link class="nav-link" to="/firmenUebersicht">Firmen Übersicht</router-link>
         </div>
       </div>
     </div>

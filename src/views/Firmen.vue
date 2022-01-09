@@ -15,7 +15,6 @@
       <input type="text" id="ustid" name="ustid" placeholder="UstID" class="inputfeld" v-model= "ust_id" >
       <input type="submit" value="Firma eintragen" @click='createFirma'>
       <input type="reset" value="Eingaben löschen">
-      <input type="submit" value="Firma löschen" @click='deleteFirma'>
     </form>
   </div>
 </template>
@@ -31,7 +30,7 @@ export default {
     }
   },
   methods: {
-    createFirma () {
+    async createFirma () {
       // const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/firma'
       const headers = new Headers()
       headers.append('Content-Type', 'application/json')
@@ -49,19 +48,7 @@ export default {
         redirect: 'follow'
       }
 
-      fetch('http://localhost:8080/api/v1/firma/', requestOptions)
-        .catch(error => console.log('error', error))
-    },
-    deleteFirma () {
-      const raw = ''
-
-      const requestOptions = {
-        method: 'DELETE',
-        body: raw,
-        redirect: 'follow'
-      }
-
-      fetch('http://localhost:8080/api/v1/firma/1', requestOptions)
+      fetch('https://webtech1accounting.herokuapp.com//api/v1/firma/', requestOptions)
         .catch(error => console.log('error', error))
     }
   }

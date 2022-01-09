@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Uebersicht from '@/views/Uebersicht'
 import Rechnung from '@/views/Rechnung'
 import Firmen from '@/views/Firmen'
+import FirmenUebersicht from '@/views/FirmenUebersicht'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/firmen',
     name: 'Firmen',
     component: Firmen
+  },
+  {
+    path: '/firmenUebersicht',
+    name: 'Firmen Übersicht',
+    component: FirmenUebersicht
   }
 ]
 

@@ -3,8 +3,8 @@
     <h1 style="text-align: center;">Hier können Sie ihre Rechnungen erstellen</h1>
     <p>Tragen Sie bitte Ihre Rechnung in das untenstehende <br>Formular ein.</p>
     <form>
-      <label for="firma">Firmenname</label>
-      <input type="text" id="firma" name="firma" placeholder="Firma">
+      <label for="firmaId">FirmenID</label>
+      <input type="text" id="firmaId" name="firmaId" placeholder="FirmenID" required v-model="owner_id">
       <label for="rechnungsNummer">Rechnungs Nummer</label>
       <input type="text" id="rechnungsNummer" name="rechnungsNummer" placeholder="Rechnungs Nummer" required
              v-model="rechnungsNummer">
@@ -40,7 +40,7 @@ export default {
       rechnungsart: '',
       rechnungsDatum: '',
       betrag: '',
-      owner_id: 1
+      owner_id: ''
     }
   },
   methods: {
@@ -63,7 +63,7 @@ export default {
         redirect: 'follow'
       }
 
-      fetch('http://localhost:8080/api/v1/rechnungen/', requestOptions)
+      fetch('https://webtech1accounting.herokuapp.com//api/v1/rechnungen/', requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error))
@@ -74,7 +74,7 @@ export default {
         redirect: 'follow'
       }
 
-      fetch('http://localhost:8080/api/v1/firma/', requestOptions)
+      fetch('https://webtech1accounting.herokuapp.com//api/v1/firma/', requestOptions)
         .then(response => response.text())
         .then(result => result.forEach(firma => this.firma.push(this.firma)))
         .catch(error => console.log('error', error))

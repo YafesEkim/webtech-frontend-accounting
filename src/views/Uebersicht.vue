@@ -46,7 +46,7 @@ export default {
       method: 'GET',
       redirect: 'follow'
     }
-    fetch('http://localhost:8080/api/v1/rechnungen/', requestOptions)
+    fetch('https://webtech1accounting.herokuapp.com//api/v1/rechnungen/', requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(rechnung => this.rechnung.push(rechnung)))
       .catch(error => console.log('error', error))
