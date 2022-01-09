@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Uebersicht from '..@/views/Uebersicht'
-import Rechnung from '..@/views/Rechnung'
+import Uebersicht from '@/views/Uebersicht'
+import Rechnung from '@/views/Rechnung'
 import Firmen from '@/views/Firmen'
 
 const routes = [
