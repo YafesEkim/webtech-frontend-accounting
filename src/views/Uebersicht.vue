@@ -40,7 +40,7 @@ export default {
       method: 'GET',
       redirect: 'follow'
     }
-    fetch('https://webtech1accounting.herokuapp.com/api/v1/firma/', requestOptions)
+    fetch('https://webtech1accounting.herokuapp.com//api/v1/firma/', requestOptions)
       .then(response => response.json())
       .then(result => console.log(result))
       .catch(error => console.log('error', error))
