@@ -15,12 +15,6 @@
         <option value="einnahme">Einnahme</option>
         <option value="ausgabe">Ausgabe</option>
       </select>
-      <label for="steuer">Mehrwertsteuersatz</label>
-      <select name="steuer" id="steuer" required>
-        <option value="" disabled selected hidden>Wähle aus...</option>
-        <option value="7mwst">7% MwSt.</option>
-        <option value="19mwst">19% MwSt</option>
-      </select>
       <input type="submit" value="Rechnung erstellen">
       <input type="reset" value="Eingaben löschen">
     </form>
@@ -36,14 +30,12 @@ export default {
 <style scoped>
 
 body{
-  background-color: rgb(174, 201, 77);
   background-image:
     url("../assets/buero-einrichten-t.jpg");
   background-repeat: no-repeat;
   -webkit-background-size : cover;
   -moz-background-size: cover;
   -moz-background-size: cover;
-
 }
 
 h1 {
