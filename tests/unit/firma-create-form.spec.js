@@ -1,12 +1,21 @@
-import { mount } from '@vue/test-utils'
-import Firmen from '@/views/Firmen.vue'
+import { flushPromises, shallowMount } from '@vue/test-utils'
+import FirmenUebersicht from '@/views/FirmenUebersicht.vue'
 
-describe('Testing Firmen.vue', () => {
-  it('should not show form by default', () => {
-    // when
-    const wrapper = mount(Firmen)
+describe('FirmenUebersicht.vue', () => {
+  beforeEach(() => {
+    fetch.resetMocks()
+  })
 
-    // then
-    expect(wrapper.find('#firmen-offcanvas').classes()).not.toContain('show')
+  it('renders Firma Name', async () => {
+    fetch.mockResponseOnce(JSON.stringify([
+      { id: 1, firmaName: 'YM AG', address: 'Kurfürstendamm', ust_id: '12345', rechnungIds: 1 }
+    ]))
+    const here = 'rendering Firma description'
+    const wrapper = shallowMount(FirmenUebersicht, {
+      props: { here }
+    })
+    await flushPromises()
+    const location = wrapper.get('.firma')
+    expect(location.text()).toMatch('YM AG')
   })
 })

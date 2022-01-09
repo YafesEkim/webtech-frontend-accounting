@@ -14,7 +14,7 @@
       <tbody v-for="firmen in firmen" :key="firmen.id">
       <tr>
         <td>{{firmen.id}}</td>
-        <td>{{firmen.firmaName}}</td>
+        <td class = "firma">{{firmen.firmaName}}</td>
         <td>{{firmen.address}}</td>
         <td>{{firmen.ust_id}}</td>
         <td>{{firmen.rechnungIds.length}}</td>
