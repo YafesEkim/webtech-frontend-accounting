@@ -1,10 +1,8 @@
 <template>
   <div class="form">
-
     <div class="banner">
       <h1>Firmeneinträge</h1>
     </div>
-
     <p class="firmatext">Trage bitte hier die Firmen ein, bei denen du Einkäufe <br> getätigt hast oder auch Artikel
       verkauft hast.</p>
     <form>
@@ -28,26 +26,22 @@ export default {
 </script>
 
 <style scoped>
-p,div,label
-{
+
+h1 {
+  font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-body{
-  background-color: rgb(174, 201, 77);
-  background-image:
-    url("../assets/buero-einrichten-t.jpg");
-  background-repeat: no-repeat;
-  -webkit-background-size : cover;
-  -moz-background-size: cover;
-  -moz-background-size: cover;
-
+p,div
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 .banner {
   position: relative;
-  height: 100px;
+  height: 130px;
   width: auto;
+  margin-bottom: 10px ;
   background-image: url("../assets/Logos15.jpg");
   background-size: cover;
   display: flex;

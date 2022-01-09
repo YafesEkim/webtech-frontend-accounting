@@ -35,13 +35,17 @@ export default {
 
 <style scoped>
 
-body {
-  background-image: url("../assets/buero-einrichten-t.jpg");
+body{
+  background-color: rgb(174, 201, 77);
+  background-image:
+    url("../assets/buero-einrichten-t.jpg");
   background-repeat: no-repeat;
   -webkit-background-size : cover;
   -moz-background-size: cover;
   -moz-background-size: cover;
+
 }
+
 h1 {
   color: #4C6D8D ;
 }

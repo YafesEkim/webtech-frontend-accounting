@@ -8,7 +8,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <router-link class="nav-link" to="/home">Startseite</router-link>
+          <router-link class="nav-link" to="/home">Home</router-link>
           <router-link class="nav-link" to="/rechnung">Rechnung</router-link>
           <router-link class="nav-link" to="/firmen">Firmen</router-link>
           <router-link class="nav-link" to="/uebersicht">Uebersicht</router-link>
