@@ -7,13 +7,13 @@
       verkauft hast.</p>
     <form>
       <label for="Firma">Firmenname</label>
-      <input type="text" id="Firma" name="Firma" placeholder="YM GmbH" class="inputfeld" required>
+      <input type="text" id="Firma" name="Firma" placeholder="YM GmbH" class="inputfeld" required v-model= "firmaName" >
       <label for="Adresse">Firmenadresse</label>
       <input type="text" id="Adresse" name="Adresse" placeholder="Musterstr. 12345 Musterstadt" size="50"
-             class="inputfeld" required>
+             class="inputfeld" required v-model= "address" >
       <label for="ustid">UmsatzsteuerID</label>
-      <input type="text" id="ustid" name="ustid" placeholder="UstID" class="inputfeld">
-      <input type="submit" value="Firma eintragen">
+      <input type="text" id="ustid" name="ustid" placeholder="UstID" class="inputfeld" v-model= "ust_id" >
+      <input type="submit" value="Firma eintragen" @click.prevent='createFirma'>
       <input type="reset" value="Eingaben löschen">
     </form>
   </div>
@@ -21,7 +21,37 @@
 
 <script>
 export default {
-  name: 'Firmen'
+  name: 'Firma',
+  data () {
+    return {
+      firmaName: '',
+      address: '',
+      ust_id: ''
+    }
+  },
+  methods: {
+    createFirma () {
+      // const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/firma'
+      const headers = new Headers()
+      headers.append('Content-Type', 'application/json')
+
+      const raw = JSON.stringify({
+        firmaName: this.firmaName,
+        address: this.address,
+        ust_id: this.ust_id
+      })
+
+      const requestOptions = {
+        method: 'POST',
+        headers: headers,
+        body: raw,
+        redirect: 'follow'
+      }
+
+      fetch('https://webtech1accounting.herokuapp.com//api/v1/firma/', requestOptions)
+        .catch(error => console.log('error', error))
+    }
+  }
 }
 </script>
 
