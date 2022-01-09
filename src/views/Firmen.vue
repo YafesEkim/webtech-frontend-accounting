@@ -57,6 +57,12 @@ export default {
 
 <style scoped>
 
+body {
+  background-image: url("../assets/buero-einrichten-t.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+}
+
 h1 {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;

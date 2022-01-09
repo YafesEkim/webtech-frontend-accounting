@@ -1,24 +1,43 @@
 <template>
-  <div>
+  <body class="bodycolor">
+  <div class="homepage">
     <h1>
       Willkommen bei YM Accounting
     </h1>
     <img class="logo" src="../assets/YMLogo.png">
     <p>Auf unserer webseite kannst du deine Rechnungen notieren und die <br>
       jeweiligen Firmen dazu hinzufügen und speichern.</p>
-    <a href="/rechnung"><button a>Rechnung erstellen</button></a>
-    <a href="firmen"><button>Firma eintragen</button></a>
-    <a href="uebersicht"><button>Rechnungen einsehen</button></a>
+    <a href="/rechnung">
+      <button a>Rechnung erstellen</button>
+    </a>
+    <a href="firmen">
+      <button>Firma eintragen</button>
+    </a>
+    <a href="uebersicht">
+      <button>Rechnungen einsehen</button>
+    </a>
   </div>
+  </body>
 </template>
 
-<script scoped>
+<script>
 export default {
   name: 'Home'
 }
 </script>
 
-<style>
+<style scoped>
+
+.homepage {
+  background: white;
+  width: 100%;
+}
+
+.bodycolor {
+  background: white;
+  width: 100%;
+
+}
 
 p {
   font-family: Arial, Helvetica, sans-serif;
@@ -44,6 +63,7 @@ button:hover {
   color: white;
   background: #4C6D8D;
 }
+
 .logo {
   width: 400px;
 }

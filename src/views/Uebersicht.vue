@@ -46,6 +46,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
+h1 {
+  background: white;
+  width: 100%;
+}
 </style>

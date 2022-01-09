@@ -29,15 +29,6 @@ export default {
 
 <style scoped>
 
-body{
-  background-image:
-    url("../assets/buero-einrichten-t.jpg");
-  background-repeat: no-repeat;
-  -webkit-background-size : cover;
-  -moz-background-size: cover;
-  -moz-background-size: cover;
-}
-
 h1 {
   color: #4C6D8D ;
 }
@@ -47,12 +38,11 @@ p{
   font-weight: bold;
   font-style: italic;
 }
-div{
+.container{
   border-radius: 10px;
   background-color: #DAD7C5;
   padding: 10px;
   width: 50%;
-
 }
 
 input[type=text] , input[type=password], input[type=number], input[type=date] , select {
@@ -103,17 +93,6 @@ label {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
-}
-
-body{
-  background-color: rgb(174, 201, 77);
-  background-image:
-    url("../assets/buero-einrichten-t.jpg");
-  background-repeat: no-repeat;
-  -webkit-background-size : cover;
-  -moz-background-size: cover;
-  -moz-background-size: cover;
-
 }
 
 input[type="reset"] {
